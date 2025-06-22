@@ -6,9 +6,46 @@
     <title>Library</title>
 
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./script/dist/script.js"></script>
+    <script src="./script/dist/script.js" defer></script>
 </head>
 <body>
+    <div class="page_container form_shown">
+        <div class="shelf_container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>N° of pages</th>
+                        <th>Already Read</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>The Last Echo of the Sunstone</td>
+                        <td>Elara Vance</td>
+                        <td>582</td>
+                        <td><input type="checkbox"></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
     
+        <form action="" method="post" class="book_form hidden_form">
+            <label for="title_input">Title of the book:</label>
+            <input type="text" id="title_input">
+    
+            <label for="author_input">Book author:</label>
+            <input type="text" id="author_input">
+    
+            <label for="number_of_pages">Number of pages</label>
+            <input type="number" name="number_of_pages" id="number_of_pages" min="0">
+    
+            <label for="read_before">Read Before</label>
+            <input type="checkbox" name="read_before" id="read_before">
+    
+            <input type="button" value="Add Book" class="add_book_button">
+        </form>
+    </div>
 </body>
 </html>
