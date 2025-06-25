@@ -51,6 +51,7 @@ function add_book_to_table(book: typeof Book) {
     const remove_cell = new_row.insertCell(0);
     const remove_button = document.createElement("button");
     remove_button.textContent = "X";
+    remove_button.className = "remove_button";
     remove_cell.appendChild(remove_button);
     
     const title_cell = new_row.insertCell(1);
@@ -170,10 +171,12 @@ add_book_button.addEventListener("click", add_book_from_form);
 function toggle_form_visibility() {
     if (new_book_button.textContent == "New Book") {
         new_book_form.className = "book_form";
+        new_book_button.className = "new_book_button hide_book_button";
         new_book_button.textContent = "Hide Book Form";
     }
     else {
         new_book_form.className = "book_form hidden_form";
+        new_book_button.className = "new_book_button";
         new_book_button.textContent = "New Book";
     }
 }
@@ -189,3 +192,103 @@ new_book_button.addEventListener("click", toggle_form_visibility);
  * 
  * Add an option to remove books from the table.
  */
+
+
+
+add_book_to_library("The Quantum Tapestry", "Elias Vance", 451, false);
+add_book_to_library("Echoes of a Forgotten Star", "Anya Sharma", 312, true);
+add_book_to_library("The Alchemist of Prague", "Corbin Blackwood", 589, false);
+add_book_to_library("Where the River Meets the Void", "Genevieve Reed", 278, true);
+add_book_to_library("Steel and Shadow", "Rhys Moreau", 720, false);
+add_book_to_library("The Last Gardener of Mars", "Fiona Chen", 345, false);
+add_book_to_library("A Symphony of Glass", "Leo Sterling", 410, true);
+add_book_to_library("The Cipher in the Sand", "Zara Al-Jamil", 333, false);
+add_book_to_library("Beneath a Neon Sun", "Jax O'Connell", 295, true);
+add_book_to_library("The Golem's Lament", "Isaac Feldman", 488, false);
+add_book_to_library("Whispers on the Solar Wind", "Kenji Tanaka", 215, false);
+add_book_to_library("The Salt-Stained Ledger", "Eleonora Costa", 380, true);
+add_book_to_library("Chronicles of the Sky-Sailors", "Silas Croft", 640, false);
+add_book_to_library("The Amber Secret", "Isolde Petrov", 267, false);
+add_book_to_library("Midnight at the Blackwood Inn", "Clara Bellwether", 305, true);
+add_book_to_library("A Study in Emerald and Ash", "Arthur Finch", 421, false);
+add_book_to_library("The Architect's Folly", "Helena Schmidt", 513, true);
+add_book_to_library("How to Weave Starlight", "Luna Evergreen", 198, false);
+add_book_to_library("The Iron Empire", "Magnus Stone", 850, false);
+add_book_to_library("Reflections in a Broken Mirror", "Victor Noir", 256, true);
+add_book_to_library("The Dragon of Old Seville", "Sofia Reyes", 388, false);
+add_book_to_library("Path of the Silent Monk", "Li Wei", 220, true);
+add_book_to_library("Cybernetic Serenade", "Nova Nexus", 310, false);
+add_book_to_library("The Forgotten Dialect of Trees", "Orion Forrester", 490, false);
+add_book_to_library("A King's Ransom, a Pauper's Debt", "Gideon Hale", 530, true);
+add_book_to_library("The Oracle of Dust", "Samira Khan", 365, false);
+add_book_to_library("When the City Sleeps", "Marcus Slade", 280, true);
+add_book_to_library("The Last Tea Shop in Kyoto", "Yuki Ishikawa", 240, false);
+add_book_to_library("Memory of a Sunken World", "Nadia Volkov", 475, true);
+add_book_to_library("The Cartographer's Blade", "Evelyn Reed", 415, false);
+add_book_to_library("Gravity's Embrace", "Dr. Aris Thorne", 680, false);
+add_book_to_library("The Boy Who Collected Shadows", "Thomas Pike", 325, true);
+add_book_to_library("A Whisper of Treason", "Lady Annelise", 440, false);
+add_book_to_library("The Somnambulist's Guide to the Galaxy", "Zilpha Quark", 180, false);
+add_book_to_library("Rust and Ruin", "Caleb Cross", 555, true);
+add_book_to_library("The Crimson Cobblestones", "Julien Dubois", 399, false);
+add_book_to_library("Theory of Abstract Beings", "Penelope Ives", 610, false);
+add_book_to_library("The Lighthouse at the Edge of Time", "Eleanor Vance", 370, true);
+add_book_to_library("Steelheart's Rebellion", "Kaelen Rostova", 710, false);
+add_book_to_library("An Ordinary Thursday", "Agnes Little", 212, true);
+add_book_to_library("The Serpent's Tooth", "Dante Verona", 460, false);
+add_book_to_library("Echoes in the Static", "Maya Lincoln", 315, false);
+add_book_to_library("The Glassblower's Daughter", "Seraphina Quill", 390, true);
+add_book_to_library("Where the Wild Roses Grow", "Elara Meadow", 270, false);
+add_book_to_library("The Sunken City of Y'ha-nthlei", "H.P. Abernathy", 480, false);
+add_book_to_library("A Pact of Blood and Silver", "Valerius Nightshade", 525, true);
+add_book_to_library("The Mechanist's Ghost", "Ada Lovelace Jr.", 340, false);
+add_book_to_library("Songs of the Deep", "Marina Cortez", 290, true);
+add_book_to_library("The Final Broadcast", "Felix Monroe", 260, false);
+add_book_to_library("Heir to a Fallen Kingdom", "Gareth Strongbow", 620, false);
+add_book_to_library("The Color of Lies", "Veronica Slate", 350, true);
+add_book_to_library("Nomad of the Star-Wastes", "Joric Kincaid", 430, false);
+add_book_to_library("The Jade Elephant", "Lin Yao", 300, true);
+add_book_to_library("A Portrait of the Artist as a Young Machine", "Unit 734", 500, false);
+add_book_to_library("The Quiet Man of Dublin", "Sean O'Malley", 285, true);
+add_book_to_library("Secrets of the Sundered Isles", "Talia Windrider", 495, false);
+add_book_to_library("The Last Spell", "Meryl Grey", 360, true);
+add_book_to_library("Quantum Entanglement for Dummies", "Dr. Evelyn Reed", 250, false);
+add_book_to_library("The Baker of Whisperwind Alley", "Poppy Greenbottle", 225, false);
+add_book_to_library("City of Endless Night", "Damien Darkwood", 540, true);
+add_book_to_library("The Starfarer's Codex", "Captain Eva Rostova", 780, false);
+add_book_to_library("A Blade in the Twilight", "Kaelen Cross", 470, false);
+add_book_to_library("The Girl Who Tasted Silence", "Eliza Thorn", 335, true);
+add_book_to_library("Recollections of a Time Traveler", "James Chronos", 405, false);
+add_book_to_library("The Bronze Heart", "Cassia Flint", 310, true);
+add_book_to_library("Waltz of the Automatons", "Victor Frankenstein III", 450, false);
+add_book_to_library("Beneath the Salt and Sky", "Mara Oceanus", 295, false);
+add_book_to_library("The Emperor's New Groovebox", "DJ Jazzy J", 150, true);
+add_book_to_library("A Shadow in the Ember", "Silas Kane", 580, false);
+add_book_to_library("The Golden Ratio of the Heart", "Florence Fibonacci", 314, true);
+add_book_to_library("Zero-Point Renegade", "Blaze Ryder", 385, false);
+add_book_to_library("The Obsidian Labyrinth", "Xylia of Crete", 666, false);
+add_book_to_library("Whiskey and Gunpowder", "Jedediah Stone", 245, true);
+add_book_to_library("The Secret Life of Fungi", "Dr. Myron Childs", 420, false);
+add_book_to_library("The Last Question... Again", "Isaac Asimov II", 120, true);
+add_book_to_library("Memoirs of a Clockwork Bird", "Aria Song", 280, false);
+add_book_to_library("The Crimson Script", "Elias Thorne", 515, true);
+add_book_to_library("Daughter of the Northern Wastes", "Freya Icewind", 435, false);
+add_book_to_library("How the Stars Fell", "Orion Nebula", 395, false);
+add_book_to_library("The Tinker's Gambit", "Finnian Cogsworth", 375, true);
+add_book_to_library("A Requiem for Mars", "Adelaide C. Clarke", 505, false);
+add_book_to_library("The Silken Thread", "Penelope Weathers", 320, true);
+add_book_to_library("The Rogue Planet", "Xander Cruz", 445, false);
+add_book_to_library("Echoes of Old Earth", "Gaia Sterling", 410, true);
+add_book_to_library("The Binary Sunset", "Luke S.", 275, false);
+add_book_to_library("The Alchemist's Heir", "Sofia Rossi", 465, true);
+add_book_to_library("Void-Dancer", "Nyx Ryder", 330, false);
+add_book_to_library("The Gilded Serpent", "Isadora Finch", 490, true);
+add_book_to_library("A City Built on Bones", "Cassius Black", 600, false);
+add_book_to_library("The Star-Woven Shawl", "Elara Vance", 355, false);
+add_book_to_library("Chronoscape Drifters", "Kaelen Rostova", 520, true);
+add_book_to_library("The Silent Orchid", "Marcus Thorne", 299, false);
+add_book_to_library("Journey to the Ashen Peak", "Alistair Finch", 478, true);
+add_book_to_library("What the Deep Ones Dream", "H.P. Abernathy", 382, false);
+add_book_to_library("The Clockwork Nightingale", "Seraphina Quill", 401, true);
+add_book_to_library("Principles of Psionic Warfare", "Cmdr. Ivanova", 750, false);
+add_book_to_library("An Unexpected Tuesday in Pomegranate", "Clara Mae Brooks", 244, true);

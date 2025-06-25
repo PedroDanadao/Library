@@ -9,6 +9,8 @@
     <script src="./script/dist/script.js" defer></script>
 </head>
 <body>
+    <img src="./images/library.jpg" alt="Library background image" class="library_image">
+
     <div class="page_container form_shown">
         <div class="shelf_container">
             <button class="new_book_button">New Book</button>
@@ -34,22 +36,32 @@
                 </table>
             </div>
         </div>
-    
-        <form action="" method="post" class="book_form hidden_form">
-            <label for="title_input">Title of the book:</label>
-            <input type="text" id="title_input">
-    
-            <label for="author_input">Book author:</label>
-            <input type="text" id="author_input">
-    
-            <label for="number_of_pages">Number of pages</label>
-            <input type="number" name="number_of_pages" id="number_of_pages" min="0">
-    
-            <label for="read_before">Read Before</label>
-            <input type="checkbox" name="read_before" id="read_before">
-    
-            <input type="button" value="Add Book" class="add_book_button">
-        </form>
+        
+        <div class="form_container">
+            <form action="" method="post" class="book_form hidden_form">
+                <label for="title_input">Title of the book:</label>
+                <input type="text" id="title_input">
+        
+                <label for="author_input">Book author:</label>
+                <input type="text" id="author_input">
+        
+                <label for="number_of_pages">Number of pages:</label>
+                <input type="number" name="number_of_pages" id="number_of_pages" min="0">
+                
+                <div class="read_before_container">
+                    <label for="read_before">Read Before:</label>
+                    <input type="checkbox" name="read_before" id="read_before">
+                </div>
+        
+                <input type="button" value="Add Book" class="add_book_button">
+            </form>
+        </div>
+    </div>
+
+    <div class="photo_links">
+        <a href="https://www.pexels.com/photo/assorted-books-on-book-shelves-1370295/" target="_blank">Photo</a> 
+        by 
+        <a href="https://www.pexels.com/@element5/" target="_blank">Element5 Digital</a>
     </div>
 </body>
 </html>

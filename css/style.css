@@ -1,3 +1,33 @@
+body {
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.library_image {
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
+.photo_links {
+    margin-left: 10px;
+    /* align-self: flex-start; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    position:fixed;
+    top: 95vh;
+}
+
+.photo_links,
+.photo_links>a {
+    color: black;
+    /* text-shadow: 2px 2px black; */
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
 
 .page_container {
     display: grid;
@@ -8,7 +38,7 @@
 }
 
 .shelf_container {
-    background-color: brown;
+    /* background-color: brown; */
     height: 90vh;
     width: 100%;
 
@@ -21,19 +51,72 @@
     /* flex-shrink: 1; */
 }
 
+.form_container {
+    position: fixed;
+    left: 100%;
+}
+
 .book_form {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+
+    /* position: fixed; */
 }
 
 .hidden_form {
     display: none;
 }
 
+.read_before_container {
+    display: flex;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+input[type="button"] {
+    margin-top: 50px;
+}
+
 .new_book_button {
     margin-top: 5px;
     margin-left: 5px;
     align-self: flex-start;
+
+    position: fixed;
+}
+
+input[type="button"],
+.new_book_button {
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: rgb(0, 136, 255);
+    color: white;
+    padding: 1em;
+}
+input[type="button"]:hover,
+.new_book_button:hover {
+    background-color: rgb(0, 195, 255);
+}
+input[type="button"]:active,
+.new_book_button:active {
+    background-color: rgb(0, 247, 255);
+}
+
+.hide_book_button {
+    background-color: rgb(223, 17, 17);
+}
+.hide_book_button:hover {
+    background-color: rgb(253, 39, 39);
+}
+.hide_book_button:active {
+    background-color: rgb(248, 77, 77);
 }
 
 .table_container {
@@ -70,4 +153,13 @@ tr:nth-child(even) td {
 
 tr:nth-child(odd) td {
     background-color: rgb(245, 245, 245);
+}
+
+.remove_button {
+    background: none;
+    border: none;
+}
+.remove_button:hover {
+    color: red;
+    text-shadow: 0px 0px 2px rgb(243, 115, 115);
 }
