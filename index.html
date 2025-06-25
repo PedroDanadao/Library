@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <script src="./script/dist/script.js" defer></script>
+    <link rel="shortcut icon" href="./images/books.png" type="image/x-icon">
 </head>
 <body>
     <img src="./images/library.jpg" alt="Library background image" class="library_image">
@@ -18,7 +19,15 @@
                 <table>
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>
+                                <label for="warn_removal_checkbox" class="warn_removal_label">
+                                    Warn Removal
+                                    <input type="checkbox" name="warn_removal_checkbox" id="warn_removal_checkbox" checked>
+                                </label>
+                                <div role="tooltip" id="tooltip_div">
+                                    Displays an alert popup for you to confirm if you want to remove the book or not.
+                                </div>
+                            </th>
                             <th>Title</th>
                             <th>Author</th>
                             <th>N° of pages</th>
@@ -65,3 +74,8 @@
     </div>
 </body>
 </html>
+
+<!--
+    page icon:
+        <a target="_blank" href="https://icons8.com/icon/13193/books">Books</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+ -->

@@ -53,7 +53,24 @@ body {
 
 .form_container {
     position: fixed;
-    left: 100%;
+    left: 85%;
+}
+
+#tooltip_div {
+    visibility: hidden;
+
+    position: absolute;
+    z-index: 1;
+
+    background-color: rgb(247, 247, 168);
+    border: solid 1px black;
+    padding: 2px 5px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+}
+.warn_removal_label:hover+#tooltip_div {
+    visibility: visible;
 }
 
 .book_form {
