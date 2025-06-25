@@ -13,9 +13,12 @@
     width: 100%;
 
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-shrink: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    flex-wrap: nowrap;
+    /* flex-shrink: 1; */
 }
 
 .book_form {
@@ -24,7 +27,20 @@
 }
 
 .hidden_form {
-    /* display: none; */
+    display: none;
+}
+
+.new_book_button {
+    margin-top: 5px;
+    margin-left: 5px;
+    align-self: flex-start;
+}
+
+.table_container {
+    display: flex;
+    justify-content: center;
+
+    justify-self: stretch;
 }
 
 table {
